@@ -4,50 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="calculator" role="main" aria-label="Calculadora">
-      <section class="display" aria-label="Display da calculadora">
-        <output class="display__expression" aria-label="Expressão atual">0</output>
-        <output
-          class="display__result"
-          aria-live="polite"
-          aria-atomic="true"
-          aria-label="Resultado"
-        >0</output>
-      </section>
+    <div class="calculator-wrapper">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
 
-      <section class="buttons" role="group" aria-label="Botões da calculadora">
-        <!-- Linha 1 -->
-        <button class="btn btn--clear span-2" data-value="C" aria-label="limpar tudo">C</button>
-        <button class="btn btn--action" data-value="⌫" aria-label="apagar dígito">⌫</button>
-        <button class="btn btn--operator" data-value="/" aria-label="dividir">÷</button>
+      <main class="calculator" role="main" aria-label="Calculadora">
+        <section class="display" aria-label="Display da calculadora">
+          <button class="btn-backspace" data-value="⌫" aria-label="apagar dígito">⌫</button>
+          <output class="display__expression" aria-label="Expressão atual">0</output>
+          <output
+            class="display__result"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-label="Resultado"
+          >0</output>
+        </section>
 
-        <!-- Linha 2 -->
-        <button class="btn" data-value="7" aria-label="sete">7</button>
-        <button class="btn" data-value="8" aria-label="oito">8</button>
-        <button class="btn" data-value="9" aria-label="nove">9</button>
-        <button class="btn btn--operator" data-value="*" aria-label="multiplicar">×</button>
+        <section class="buttons" role="group" aria-label="Botões da calculadora">
+          <!-- Linha 1 -->
+          <button class="btn btn--clear" data-value="C" aria-label="limpar tudo">AC</button>
+          <button class="btn btn--clear" data-value="" aria-label="sinal positivo negativo" disabled style="opacity:0.4">+/−</button>
+          <button class="btn btn--clear" data-value="" aria-label="porcentagem" disabled style="opacity:0.4">%</button>
+          <button class="btn btn--operator" data-value="/" aria-label="dividir">÷</button>
 
-        <!-- Linha 3 -->
-        <button class="btn" data-value="4" aria-label="quatro">4</button>
-        <button class="btn" data-value="5" aria-label="cinco">5</button>
-        <button class="btn" data-value="6" aria-label="seis">6</button>
-        <button class="btn btn--operator" data-value="-" aria-label="subtrair">−</button>
+          <!-- Linha 2 -->
+          <button class="btn" data-value="7" aria-label="sete">7</button>
+          <button class="btn" data-value="8" aria-label="oito">8</button>
+          <button class="btn" data-value="9" aria-label="nove">9</button>
+          <button class="btn btn--operator" data-value="*" aria-label="multiplicar">×</button>
 
-        <!-- Linha 4 -->
-        <button class="btn" data-value="1" aria-label="um">1</button>
-        <button class="btn" data-value="2" aria-label="dois">2</button>
-        <button class="btn" data-value="3" aria-label="três">3</button>
-        <button class="btn btn--operator" data-value="+" aria-label="somar">+</button>
+          <!-- Linha 3 -->
+          <button class="btn" data-value="4" aria-label="quatro">4</button>
+          <button class="btn" data-value="5" aria-label="cinco">5</button>
+          <button class="btn" data-value="6" aria-label="seis">6</button>
+          <button class="btn btn--operator" data-value="-" aria-label="subtrair">−</button>
 
-        <!-- Linha 5 -->
-        <button class="btn span-2" data-value="0" aria-label="zero">0</button>
-        <button class="btn" data-value="." aria-label="vírgula">.</button>
-        <button class="btn btn--equals" data-value="=" aria-label="igual">=</button>
-      </section>
-    </main>
+          <!-- Linha 4 -->
+          <button class="btn" data-value="1" aria-label="um">1</button>
+          <button class="btn" data-value="2" aria-label="dois">2</button>
+          <button class="btn" data-value="3" aria-label="três">3</button>
+          <button class="btn btn--operator" data-value="+" aria-label="somar">+</button>
+
+          <!-- Linha 5 -->
+          <button class="btn span-2" data-value="0" aria-label="zero">0</button>
+          <button class="btn" data-value="." aria-label="vírgula">.</button>
+          <button class="btn btn--equals" data-value="=" aria-label="igual">=</button>
+        </section>
+      </main>
+    </div>
 
     <script type="module" src="calculator.js"></script>
   </body>
