@@ -1,0 +1,14 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "Calculadora web — exercício AIOX SDC ponta a ponta",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}
